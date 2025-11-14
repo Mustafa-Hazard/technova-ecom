@@ -1,0 +1,26 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Welcome to the products page. Here is the list of available products:</p>
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product</li>
+    }
+</ul>
+
+<!-- Optional: Add a link to a Details page for example -->
+<p>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <a href="@Url.Action("Details", "Products", new { id = i + 1 })">View Details of @Model[i]</a>
+    
+        <br />
+    }
+</p>
