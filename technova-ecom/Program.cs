@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Models;
+using technova_ecom.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

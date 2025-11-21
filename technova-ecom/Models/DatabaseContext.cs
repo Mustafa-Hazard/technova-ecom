@@ -1,12 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using technova_ecom.Models.Entities;
 
-namespace Models
+namespace technova_ecom.Models
 {
     public class DatabaseContext : DbContext
     {
@@ -16,5 +11,7 @@ namespace Models
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }

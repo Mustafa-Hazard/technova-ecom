@@ -3,77 +3,58 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - technova_ecom</title>
-
+    <title>@ViewData["Title"] - technova_ecommerce</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/bootswatch-css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/technova_ecom.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/technova_ecomm.styles.css" asp-append-version="true" />
 </head>
-
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">TechNova</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarColor01" aria-controls="navbarColor01"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#">Tech Nova - Ecommerce Shop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
-
                         <li class="nav-item">
                             <a class="nav-link active" href="#">
                                 Home
                                 <span class="visually-hidden">(current)</span>
                             </a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Customers" asp-action="Index">Customers</a>
-                        </li>
-
-                        <!-- Added Products link here -->
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Products" asp-action="Index">Products</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
-                               role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Customers</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Customers">View All</a>
+                                <a class="dropdown-item" asp-action="Create" asp-controller="Customers">Create</a>
                             </div>
                         </li>
-
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Categories">View All</a>
+                                <a class="dropdown-item" asp-action="Create" asp-controller="Categories">Create</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Products">View All</a>
+                                <a class="dropdown-item" asp-action="Create" asp-controller="Products">Create</a>
+                            </div>
+                        </li>
                     </ul>
-
                     <form class="d-flex">
                         <input class="form-control me-sm-2" type="search" placeholder="Search">
                         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                     </form>
-
                 </div>
             </div>
         </nav>
     </header>
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -82,11 +63,9 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2025 - technova_ecom -
-            <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - technova_ecommerce - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
